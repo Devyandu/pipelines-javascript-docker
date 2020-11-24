@@ -37,12 +37,3 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-    - task: AzureRmWebAppDeployment@4
-      inputs:
-        ConnectionType: 'AzureRM'
-        azureSubscription: 'Visual Studio Enterprise(fb0ac822-d36d-455d-bc6f-fee2b50b56e2)'
-        appType: 'webAppContainer'
-        WebAppName: 'dbhatia-container-web'
-        DockerNamespace: 'dbhatia.azurecr.io'
-        DockerRepository: 'devyandupipelinesjavascriptdocker'
-        DockerImageTag: 'latest'

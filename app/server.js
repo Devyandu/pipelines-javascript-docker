@@ -39,7 +39,7 @@ app.get('/plans', (req, res) => {
     }
   ]);
 });
-app.get('/nextAction', (req, res) => {
+app.post('/nextAction', (req, res) => {
   console.log(req.body);
    res.send({'name':'plans'});
 });
